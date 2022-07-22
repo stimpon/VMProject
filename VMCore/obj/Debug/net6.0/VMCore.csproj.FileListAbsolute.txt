@@ -1,0 +1,12 @@
+C:\Users\stimp\source\repos\VirtualMachineProject\VMCore\bin\Debug\net6.0\VMCore.deps.json
+C:\Users\stimp\source\repos\VirtualMachineProject\VMCore\bin\Debug\net6.0\VMCore.dll
+C:\Users\stimp\source\repos\VirtualMachineProject\VMCore\bin\Debug\net6.0\VMCore.pdb
+C:\Users\stimp\source\repos\VirtualMachineProject\VMCore\obj\Debug\net6.0\VMCore.csproj.AssemblyReference.cache
+C:\Users\stimp\source\repos\VirtualMachineProject\VMCore\obj\Debug\net6.0\VMCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stimp\source\repos\VirtualMachineProject\VMCore\obj\Debug\net6.0\VMCore.AssemblyInfoInputs.cache
+C:\Users\stimp\source\repos\VirtualMachineProject\VMCore\obj\Debug\net6.0\VMCore.AssemblyInfo.cs
+C:\Users\stimp\source\repos\VirtualMachineProject\VMCore\obj\Debug\net6.0\VMCore.csproj.CoreCompileInputs.cache
+C:\Users\stimp\source\repos\VirtualMachineProject\VMCore\obj\Debug\net6.0\VMCore.dll
+C:\Users\stimp\source\repos\VirtualMachineProject\VMCore\obj\Debug\net6.0\refint\VMCore.dll
+C:\Users\stimp\source\repos\VirtualMachineProject\VMCore\obj\Debug\net6.0\VMCore.pdb
+C:\Users\stimp\source\repos\VirtualMachineProject\VMCore\obj\Debug\net6.0\ref\VMCore.dll

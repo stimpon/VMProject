@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Otwr044Ok1SzkLhY+R8nwr87pc8yl5FVpO52ZBAlrdjW9RmjHJ1aBvLbnxAU1povgQI4APgCyeHkrYEACTMZdg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\stimp\\source\\repos\\VirtualMachineProject\\VMTester\\VMTester.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\stimp\\.nuget\\packages\\spectre.console\\0.44.0\\spectre.console.0.44.0.nupkg.sha512"
+  ],
+  "logs": []
+}

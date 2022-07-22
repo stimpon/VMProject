@@ -1,0 +1,20 @@
+C:\Users\stimp\source\repos\VirtualMachineProject\VMTester\bin\Debug\net6.0\VMTester.exe
+C:\Users\stimp\source\repos\VirtualMachineProject\VMTester\bin\Debug\net6.0\VMTester.deps.json
+C:\Users\stimp\source\repos\VirtualMachineProject\VMTester\bin\Debug\net6.0\VMTester.runtimeconfig.json
+C:\Users\stimp\source\repos\VirtualMachineProject\VMTester\bin\Debug\net6.0\VMTester.dll
+C:\Users\stimp\source\repos\VirtualMachineProject\VMTester\bin\Debug\net6.0\VMTester.pdb
+C:\Users\stimp\source\repos\VirtualMachineProject\VMTester\bin\Debug\net6.0\Spectre.Console.dll
+C:\Users\stimp\source\repos\VirtualMachineProject\VMTester\bin\Debug\net6.0\VMCore.dll
+C:\Users\stimp\source\repos\VirtualMachineProject\VMTester\bin\Debug\net6.0\VMCore.pdb
+C:\Users\stimp\source\repos\VirtualMachineProject\VMTester\obj\Debug\net6.0\VMTester.csproj.AssemblyReference.cache
+C:\Users\stimp\source\repos\VirtualMachineProject\VMTester\obj\Debug\net6.0\VMTester.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stimp\source\repos\VirtualMachineProject\VMTester\obj\Debug\net6.0\VMTester.AssemblyInfoInputs.cache
+C:\Users\stimp\source\repos\VirtualMachineProject\VMTester\obj\Debug\net6.0\VMTester.AssemblyInfo.cs
+C:\Users\stimp\source\repos\VirtualMachineProject\VMTester\obj\Debug\net6.0\VMTester.csproj.CoreCompileInputs.cache
+C:\Users\stimp\source\repos\VirtualMachineProject\VMTester\obj\Debug\net6.0\VMTester.csproj.CopyComplete
+C:\Users\stimp\source\repos\VirtualMachineProject\VMTester\obj\Debug\net6.0\VMTester.dll
+C:\Users\stimp\source\repos\VirtualMachineProject\VMTester\obj\Debug\net6.0\refint\VMTester.dll
+C:\Users\stimp\source\repos\VirtualMachineProject\VMTester\obj\Debug\net6.0\VMTester.pdb
+C:\Users\stimp\source\repos\VirtualMachineProject\VMTester\obj\Debug\net6.0\VMTester.genruntimeconfig.cache
+C:\Users\stimp\source\repos\VirtualMachineProject\VMTester\obj\Debug\net6.0\ref\VMTester.dll
+C:\Users\stimp\source\repos\VirtualMachineProject\VMTester\bin\Debug\net6.0\Byte code\hello_world

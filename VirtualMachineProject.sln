@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VMCore", "VMCore\VMCore.csproj", "{8494DF84-D7CF-4D89-92A8-73AE5F344C5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VMTester", "VMTester\VMTester.csproj", "{A499E78A-2A29-4E9B-A22D-E0B27010CCA9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8494DF84-D7CF-4D89-92A8-73AE5F344C5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8494DF84-D7CF-4D89-92A8-73AE5F344C5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8494DF84-D7CF-4D89-92A8-73AE5F344C5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8494DF84-D7CF-4D89-92A8-73AE5F344C5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A499E78A-2A29-4E9B-A22D-E0B27010CCA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A499E78A-2A29-4E9B-A22D-E0B27010CCA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A499E78A-2A29-4E9B-A22D-E0B27010CCA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A499E78A-2A29-4E9B-A22D-E0B27010CCA9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46F54C9C-AEEB-4446-97D1-FAB1878DDF42}
+	EndGlobalSection
+EndGlobal
