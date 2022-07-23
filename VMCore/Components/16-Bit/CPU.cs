@@ -48,12 +48,16 @@ public class CPU
         {
             "ip",  // Instruction pointer 
             "acr", // Accumilator register
-            "r1", "r2", "r3", "r4" // General purpose registers
+            "r1", "r2", "r3", "r4", // General purpose registers
+            "sp"   // Stack pointer
         };
 
         // Setup registers for this 16 bit processor
         // We need to have 2 bytes per register
         this.Registers = new byte[RegisterNames.Length * 2];
+
+        // Place stack pointer in the middle of memory
+        SetRegister("sp", (ushort)(memory.Memory.Length / 2));
     }
 
     #endregion
@@ -150,7 +154,7 @@ public class CPU
     /// <summary>
     /// Executes the next CPU instruciton
     /// </summary>
-    public void Execute(ushort instruction)
+    public void Compute(ushort instruction)
     {
         // Check the instruction
         switch ((Instruction)instruction)
@@ -172,6 +176,8 @@ public class CPU
                     this.SetRegister("acr", (ushort)(lit1 + lit2));
                 }
                 break;
+
+            #region Move operations
 
             // Move instruction (value to register)
             case Instruction.MOV_LIT_REG:
@@ -241,6 +247,58 @@ public class CPU
                 }
                 break;
 
+            #endregion
+
+            #region Stack operations
+
+            // Push literal to the stack
+            case Instruction.PUSH_LIT:
+                {
+                    // Get the literal that should be pushed to the stack
+                    var stVal = Fetch16();
+                    // We need to know where to insert the value, we get taht from the stack pointer
+                    var spInsAddr = GetRegister("sp");
+                    // Insert value to the stack
+                    this.Memory.SetUInt16(spInsAddr, stVal);
+                    // Decrease the stack pointer
+                    SetRegister("sp", (ushort)(spInsAddr - 2));               
+                }
+                break;
+
+            // Push value from register to the stack
+            case Instruction.PUSH_REG:
+                {
+                    // Get register address
+                    var stValAddr = Fetch16();
+                    // Get value from that address
+                    var stVal = GetRegister(stValAddr);
+                    // We need to know where to insert the value, we get taht from the stack pointer
+                    var spInsAddr = GetRegister("sp");
+                    // Insert value to the stack
+                    this.Memory.SetUInt16(spInsAddr, stVal);
+                    // Decrease the stack pointer
+                    SetRegister("sp", (ushort)(spInsAddr - 2));
+                }
+                break;
+
+            // Puch value from memory (heap) to the stack
+            case Instruction.PUSH_MEM:
+                {
+                    // Get memory address
+                    var stValAddr = Fetch16();
+                    // Get the value at this address from memory
+                    var stVal = this.Memory.GetUInt16(stValAddr);
+                    // We need to know where to insert the value, we get taht from the stack pointer
+                    var spInsAddr = GetRegister("sp");
+                    // Insert value to the stack
+                    this.Memory.SetUInt16(spInsAddr, stVal);
+                    // Decrease the stack pointer
+                    SetRegister("sp", (ushort)(spInsAddr - 2));
+                }
+                break;
+
+            #endregion
+
             // No operation instruction
             case Instruction.NOP:
                 break;
@@ -258,7 +316,7 @@ public class CPU
         // Fetch the next instruction (Always 8 bits)
         var instruction = this.Fetch8();
         // Execute instruciton
-        Execute(instruction);
+        Compute(instruction);
     }
 
     #endregion

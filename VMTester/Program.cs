@@ -18,19 +18,18 @@ public class Program
     /// <param name="Args"></param>
     public static void Main(string[] Args)
     {
-        var memory = File.ReadAllText(Environment.CurrentDirectory + "/Byte code/hello_world")
+        var memory = File.ReadAllText(Environment.CurrentDirectory + "/Byte code/stack_test")
             .Split(new String[] { "\r\n", " ", "\n", "\r" }, StringSplitOptions.None)
             .Where(b => !String.IsNullOrEmpty(b))
             .Select(b => Convert.ToByte(b, 16))
             .ToArray();
 
         // Setup memory mapper
-        var mapper = new MemoryMapper(0xFF * 0xFF);
+        var mapper = new MemoryMapper(0xAA);
         // Connect virtual monitor
-        mapper.Map(new Monitor(), 0x1000, 0x1400);
+        //mapper.Map(new Monitor(), 0x1000, 0x1400);
         // Create a CPU and provide programmed memory
         var cpu = new CPU(mapper);
-
         // Load byte code
         cpu.Memory.LoadByteCode(memory, 0x00);
 
@@ -40,24 +39,9 @@ public class Program
         cpu.Step();
         cpu.Step();
         cpu.Step();
-        cpu.Step();
-        cpu.Step();
-        cpu.Step();
-        cpu.Step();
-        cpu.Step();
-        cpu.Step();
-        cpu.Step();
-        cpu.Step();
-        cpu.Step();
-        cpu.Step();
-        cpu.Step();
-        cpu.Step();
-        cpu.Step();
-        cpu.Step();
-        cpu.Step();
-        cpu.Step();
-        cpu.Step();
 
+        PrintRegistersReadable(cpu);
+        MemDump(cpu);
     }
 
     /// <summary>
@@ -106,6 +90,26 @@ public class Program
                 $"0x{Array.IndexOf(cpu.RegisterNames, address) * 2}", 
                 $"0x{cpu.GetRegister(address):X4}",
                 cpu.GetRegister(address).ToString());
+        }
+
+        // Print the table
+        AnsiConsole.Write(table);
+    }
+
+    public static void MemDump(CPU cpu)
+    {
+        // Create spectre table
+        var table = new Table();
+
+        // Add the 2 header columns
+        table.AddColumn(new("[Green]Address[/]"));
+        table.AddColumn(new("[Green]Value[/]"));
+
+        // Loop through all cpu registers
+        for (int i = 0; i < cpu.Memory.Memory.Length; i++)
+        {
+            // Add the current register to the table
+            table.AddRow($"0x{i.ToString("X")}", $"0x{cpu.Memory.Memory[i].ToString("X2")}");
         }
 
         // Print the table

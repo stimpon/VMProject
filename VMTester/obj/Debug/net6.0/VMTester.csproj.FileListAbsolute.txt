@@ -18,3 +18,4 @@ C:\Users\stimp\source\repos\VirtualMachineProject\VMTester\obj\Debug\net6.0\VMTe
 C:\Users\stimp\source\repos\VirtualMachineProject\VMTester\obj\Debug\net6.0\VMTester.genruntimeconfig.cache
 C:\Users\stimp\source\repos\VirtualMachineProject\VMTester\obj\Debug\net6.0\ref\VMTester.dll
 C:\Users\stimp\source\repos\VirtualMachineProject\VMTester\bin\Debug\net6.0\Byte code\hello_world
+C:\Users\stimp\source\repos\VirtualMachineProject\VMTester\bin\Debug\net6.0\Byte code\stack_test

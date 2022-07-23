@@ -32,6 +32,31 @@ public enum Instruction
     MOV_MEM_REG = 0x14,
 
     /// <summary>
+    /// Push a literal value to the stack
+    /// </summary>
+    PUSH_LIT = 0x15,
+
+    /// <summary>
+    /// Push a value from a register to the stack
+    /// </summary>
+    PUSH_REG = 0x16,
+
+    /// <summary>
+    /// Push a value from memory (heap) to the stack
+    /// </summary>
+    PUSH_MEM = 0x17,
+
+    /// <summary>
+    /// Delete top literal at the stack, copy it to the specified register
+    /// </summary>
+    POP_REG = 0x18,
+
+    /// <summary>
+    /// Delete top literl at the stack, copy it to the specifed memory address
+    /// </summary>
+    POP_MEM = 0x19,
+
+    /// <summary>
     /// Add instruction
     /// </summary>
     ADD = 0x02,
